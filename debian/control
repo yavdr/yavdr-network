@@ -1,0 +1,11 @@
+Source: yavdr-network
+Section: misc
+Priority: extra
+Maintainer: Marco Scholl <develop@marco-scholl.de>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+
+Package: yavdr-network-base
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: base files for network support
