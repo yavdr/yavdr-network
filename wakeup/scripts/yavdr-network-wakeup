@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for KEY in `yavdr-db-tool -a childrens -k network.wol.clients`; do
+  BOOTUP=`yavdr-db-tool -k network.wol.clients.$KEY.bootup`
+  ADDRESS=`yavdr-db-tool -k network.wol.clients.$KEY.address`
+  if [ "$BOOTUP" == "1" ]; then
+    logger -t $0 "$ADDRESS"
+    wakeonlan $ADDRESS > /dev/null
+  fi
+done

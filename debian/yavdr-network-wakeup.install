@@ -1,0 +1,3 @@
+wakeup/etc/*		etc/
+wakeup/scripts/*	usr/bin/
+

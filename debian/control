@@ -7,5 +7,10 @@ Standards-Version: 3.9.2
 
 Package: yavdr-network-base
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ethtool
 Description: base files for network support
+
+Package: yavdr-network-wakeup
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, wakeonlan
+Description: wake on lan handling
