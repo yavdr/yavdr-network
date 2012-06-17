@@ -5,12 +5,12 @@ Maintainer: Marco Scholl <develop@marco-scholl.de>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.2
 
-Package: yavdr-network-base
+Package: yavdr-network
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ethtool
 Description: base files for network support
 
 Package: yavdr-network-wakeup
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, wakeonlan
+Depends: ${shlibs:Depends}, ${misc:Depends}, yavdr-network, wakeonlan
 Description: wake on lan handling
